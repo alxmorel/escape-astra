@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bspifko5cwrc7"]
+
+[ext_resource type="PackedScene" uid="uid://8bpueb55ickn" path="res://assets/models/stone_sword.glb" id="1_model"]
+
+[node name="StoneSword" type="Node3D" unique_id=1624948433]
+
+[node name="Model" parent="." unique_id=1164575947 instance=ExtResource("1_model")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, -1, 0, 8.742278e-08, 0, 1, 0, 0.044, 0)

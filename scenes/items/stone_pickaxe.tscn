@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b2y1sgsm15hdb"]
+
+[ext_resource type="PackedScene" uid="uid://c5u8nkqva76dd" path="res://assets/models/StonePickaxe.glb" id="1_model"]
+
+[node name="StonePickaxe" type="Node3D" unique_id=1112380615]
+
+[node name="Model" parent="." unique_id=1524163805 instance=ExtResource("1_model")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, -0.06076719, 0)

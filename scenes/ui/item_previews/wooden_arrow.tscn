@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dkjarhrqdkwci"]
+
+[ext_resource type="PackedScene" uid="uid://dh7st48750qgg" path="res://assets/models/wooden_arrow.glb" id="1_model"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="wooden_arrow" type="Node3D" unique_id=1424392012]
+
+[node name="World" type="Node3D" parent="." unique_id=150282878]
+
+[node name="Model" type="Node3D" parent="World" unique_id=1473965058]
+
+[node name="Arrow" parent="World/Model" unique_id=1475219212 instance=ExtResource("1_model")]
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=1737716947]
+transform = Transform3D(0.90034896, -0.051777977, 0.43207735, 0, 0.99289626, 0.11898369, -0.43516868, -0.10712685, 0.8939531, 2.2226398, 0.18902093, 4.4557476)
+current = true
+fov = 28.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=1441804393]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World" unique_id=822899180]
+transform = Transform3D(0.9634118, -0.17934425, 0.1991819, 0, 0.7431448, 0.6691306, -0.26802573, -0.6446483, 0.7159544, 0, 0, 0)
+light_energy = 1.865
+
+[node name="FillLight" type="DirectionalLight3D" parent="World" unique_id=1587425635]
+transform = Transform3D(-0.4810624, 0.6514753, 0.5866506, -0.60297704, 0.2398815, -0.7608388, -0.6363943, -0.71974796, 0.2774266, 0, 0, 0)
+light_energy = 1.196

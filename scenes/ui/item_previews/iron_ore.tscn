@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://brfucoqvcu4l3"]
+
+[ext_resource type="PackedScene" uid="uid://k32ocyhxdkce" path="res://assets/models/iron_rock_01.glb" id="1_model"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="iron_ore" type="Node3D" unique_id=1279061595]
+
+[node name="World" type="Node3D" parent="." unique_id=1187511277]
+
+[node name="Model" type="Node3D" parent="World" unique_id=2006420906]
+
+[node name="IronRock" parent="World/Model" unique_id=336268140 instance=ExtResource("1_model")]
+transform = Transform3D(1.35, 0, 0, 0, 1.35, 0, 0, 0, 1.35, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=1970352576]
+transform = Transform3D(0.89567834, -0.048099253, 0.4420937, 0.00634318, 0.99541414, 0.095448606, -0.44465733, -0.08268697, 0.891876, 2.6849337, 1.392972, 5.554829)
+current = true
+fov = 28.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=1469271052]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World" unique_id=323802138]
+transform = Transform3D(-0.6845363, 0.24593937, 0.68623894, -0.5731236, -0.7633095, -0.29814112, 0.45048806, -0.59738815, 0.6634666, 2.0601583, 2.5432875, 5.4795966)
+light_energy = 1.749
+
+[node name="FillLight" type="DirectionalLight3D" parent="World" unique_id=333764141]
+transform = Transform3D(-0.73183, -0.23308244, 0.6403886, 1.6728161e-09, 0.9396926, 0.34202015, -0.6814873, 0.25030065, -0.68769526, -5.4793277, 1.0163827, 3.9284515)
+light_energy = 3.902

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c8coalpreview0001"]
+
+[ext_resource type="PackedScene" uid="uid://ckcliteqq1c2f" path="res://assets/models/Coal.glb" id="1_model"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="coal" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Model" type="Node3D" parent="World"]
+
+[node name="Coal" parent="World/Model" instance=ExtResource("1_model")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World"]
+transform = Transform3D(0.89567834, -0.048099253, 0.4420937, 0.00634318, 0.99541414, 0.095448606, -0.44465733, -0.08268697, 0.891876, 1.1, 0.55, 2.3)
+current = true
+fov = 28.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(0.81915206, -0.38379756, 0.42625037, 0, 0.7431448, 0.6691306, -0.57357645, -0.5481197, 0.6087486, 0, 0, 0)
+light_energy = 1.35
+
+[node name="FillLight" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(-0.76604444, 0.21984631, -0.6040228, 0, 0.9396926, 0.34202012, 0.64278764, 0.26200262, -0.7198463, 0, 0, 0)
+light_energy = 0.35

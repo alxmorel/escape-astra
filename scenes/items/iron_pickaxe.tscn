@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d0r8lgj5asofw"]
+
+[ext_resource type="PackedScene" uid="uid://wfps74rmt7kf" path="res://assets/models/IronPickaxe.glb" id="1_model"]
+
+[node name="IronPickaxe" type="Node3D" unique_id=1347342571]
+
+[node name="Model" parent="." unique_id=143121042 instance=ExtResource("1_model")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, -0.061, 0)

@@ -1,0 +1,13 @@
+---
+description: Conventions stables Escape Astra (Godot 4, inventaire, UI coffre)
+alwaysApply: true
+---
+
+# Escape Astra
+
+- Godot 4 : scripts sous `scripts/` (`core/`, `audio/`, `ui/`, `world/`, `terrain/`, `inventory/`, …), scènes sous `scenes/`.
+- Inventaire : passer par `SlotInventoryAdapter`, `SlotStackOps`, `SlotPointerSession` ; pas de logique parallèle ni duplication de stacks.
+- UI coffre : hotbar = HUD (`HotbarLayer`), pas de hotbar intégrée dans `storage_panel`.
+- Diff minimal ; pas de refactor ni fichiers hors demande.
+- Après changement de flux / chemin : mettre à jour `AGENTS.md`.
+- Réponses utilisateur en français, concises.

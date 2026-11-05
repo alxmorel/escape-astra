@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bmpqo3xko46mu"]
+
+[ext_resource type="Script" uid="uid://bgkjoecgq542x" path="res://scripts/items/arrow_projectile.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://dh7st48750qgg" path="res://assets/models/wooden_arrow.glb" id="2_model"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_arrow"]
+radius = 0.04
+height = 0.52
+
+[node name="WoodenArrowProjectile" type="CharacterBody3D" unique_id=830419940]
+collision_layer = 0
+collision_mask = 9
+script = ExtResource("1_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1729764778]
+shape = SubResource("CapsuleShape3D_arrow")
+
+[node name="Visual" parent="." unique_id=1867485114 instance=ExtResource("2_model")]

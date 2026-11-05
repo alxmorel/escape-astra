@@ -1,0 +1,122 @@
+keys,fr,en
+MENU_TITLE,Escape Astra,Escape Astra
+MENU_PAUSE,PAUSE,PAUSE
+MENU_PLAY,Jouer,Play
+MENU_SETTINGS,Paramètres,Settings
+MENU_QUIT,Quitter,Quit
+MENU_NEW_GAME,Nouvelle partie,New Game
+MENU_LOAD_GAME,Charger,Load Game
+MENU_BACK,Retour,Back
+MENU_RESUME,Reprendre,Resume
+MENU_SAVE,Sauvegarder,Save Game
+MENU_QUIT_TO_MENU,Menu principal,Quit to Main Menu
+SAVE_NAME_PROMPT,Nom de la partie,Save name
+SAVE_DEFAULT_NAME,Partie,Game
+SAVE_START,Commencer,Start
+SAVE_PLAY,Jouer,Play
+SAVE_DELETE,Supprimer,Delete
+SAVE_DELETE_ALL,Supprimer toutes les sauvegardes,Delete all saves
+SAVE_CONFIRM,Supprimer cette partie ?,Delete this save?
+SAVE_CONFIRM_ALL,Supprimer toutes les sauvegardes ?,Delete all saves?
+SAVE_CONFIRM_ALL_DETAIL,%s partie(s) seront supprimées définitivement.,%s save(s) will be permanently deleted.
+SAVE_EMPTY,Aucune sauvegarde,No saves
+SAVE_WHEN,Dernière sauvegarde : %s,Last save: %s
+SAVE_TIME,Temps de jeu : %s,Play time: %s
+SAVE_SEED,Seed : %s,Seed: %s
+SAVE_DONE,Partie sauvegardée,Game saved
+SETTINGS_LANGUAGE,Langue,Language
+AUDIO_MASTER,Volume général,Master volume
+AUDIO_SFX,Effets sonores,Sound effects
+AUDIO_ENVIRONMENT,Ambiance,Ambiance
+AUDIO_FOOTSTEPS,Bruits de pas,Footsteps
+AUDIO_MUSIC,Musique,Music
+LANG_FR,Français,Français
+LANG_EN,English,English
+INVENTORY,Inventaire,Inventory
+BACKPACK,Sac,Backpack
+CRAFT,Fabriquer,Craft
+CRAFTING,Fabrication,Crafting
+CRAFT_DROP_HINT,Cliquez un emplacement du sac pour déposer. Molette ou +/- pour la quantité. Clic droit pour annuler.,Click a backpack slot to place. Wheel or +/- for quantity. Right-click to cancel.
+CHEST,Coffre,Chest
+HUD_HP,PV %d / %d,HP %d / %d
+HUD_HUNGER,Faim %d / %d,Hunger %d / %d
+TOOLTIP_HUNGER,+%d faim,+%d hunger
+TAB_RESOURCES,Ressources,Resources
+TAB_TOOLS,Outils,Tools
+TAB_CONSTRUCTION,Construction,Construction
+TAB_MACHINES,Machines,Machines
+TAB_STORAGE,Stockage,Storage
+SUB_ALL,Tout,All
+SUB_FOUNDATIONS,Fondations,Foundations
+SUB_WALLS,Murs,Walls
+SUB_FLOORS,Sols,Floors
+SUB_STAIRS,Escaliers,Stairs
+SUB_OPENINGS,Ouvertures,Openings
+SUB_STORAGE,Stockage,Storage
+BUILD_MODE_DESTROY,[C] Destruction,[C] Destroy
+BUILD_MODE_BUILD,[C] Construction,[C] Build
+BUILD_PLACE,[LMB] Placer,[LMB] Place
+BUILD_ROTATE,[R] Rotation,[R] Rotate
+BUILD_ELEVATE,[Shift + Molette] Élévation,[Shift + Wheel] Elevation
+BUILD_CANCEL,[Échap] Annuler,[Esc] Cancel
+BUILD_DISMANTLE,[LMB] Démonter,[LMB] Dismantle
+ITEM_WOOD,Bois,Wood
+ITEM_STICKS,Bâtons,Sticks
+ITEM_WOOD_PLANKS,Planches de bois,Wood Planks
+ITEM_STONE,Pierre,Stone
+ITEM_IRON_ORE,Minerai de fer,Iron Ore
+ITEM_DIRT,Terre,Dirt
+ITEM_CHARCOAL,Charbon de bois,Charcoal
+ITEM_COAL,Charbon,Coal
+ITEM_TORCH,Torche,Torch
+ITEM_WOODEN_SHOVEL,Pelle en bois,Wooden Shovel
+ITEM_STONE_SHOVEL,Pelle en pierre,Stone Shovel
+ITEM_IRON_SHOVEL,Pelle en fer,Iron Shovel
+ITEM_WOODEN_PICKAXE,Pioche en bois,Wooden Pickaxe
+ITEM_STONE_PICKAXE,Pioche en pierre,Stone Pickaxe
+ITEM_IRON_PICKAXE,Pioche en fer,Iron Pickaxe
+ITEM_WOODEN_AXE,Hache en bois,Wooden Axe
+ITEM_STONE_AXE,Hache en pierre,Stone Axe
+ITEM_IRON_AXE,Hache en fer,Iron Axe
+ITEM_WOODEN_SWORD,Épée en bois,Wooden Sword
+ITEM_STONE_SWORD,Épée en pierre,Stone Sword
+ITEM_IRON_SWORD,Épée en fer,Iron Sword
+ITEM_PRIMITIVE_DRILL,Foreuse primitive,Primitive Drill
+ITEM_CAMP_TOTEM,Totem de camp,Camp Totem
+ITEM_FURNACE,Four,Furnace
+FURNACE_INPUT,À cuire,Input
+FURNACE_FUEL,Combustible,Fuel
+FURNACE_RESULT,Résultat,Result
+ITEM_FLOUR_GRINDER,Moulin à farine,Flour Grinder
+ITEM_FERMENTATION_TANK,Cuve de fermentation,Fermentation Tank
+ITEM_DISTILLERY,Distillerie,Distillery
+ITEM_WOODEN_HOE,Houe en bois,Wooden Hoe
+ITEM_STONE_HOE,Houe en pierre,Stone Hoe
+ITEM_IRON_HOE,Houe en fer,Iron Hoe
+ITEM_WOODEN_RAKE,Râteau en bois,Wooden Rake
+PLOT_SLOPE,Pente trop forte,Slope too steep
+PLOT_WATER,Sous l'eau,Underwater
+PLOT_SURFACES,Plusieurs surfaces,Multiple surfaces
+PLOT_OVERHANG,Surplomb,Overhang
+PLOT_DIRT,Pas de terre,Not dirt
+PLOT_TAKEN,Déjà cultivée,Already tilled
+PLOT_EMPTY,Pas de surface,No surface
+ITEM_WHEAT,Blé,Wheat
+ITEM_WHEAT_SEEDS,Graines de blé,Wheat Seeds
+ITEM_BREAD,Pain,Bread
+ITEM_WOOD_FOUNDATION,Fondation en bois,Wood Foundation
+ITEM_WOOD_WALL,Mur en bois,Wood Wall
+ITEM_WOOD_WINDOW_WALL,Mur fenêtre en bois,Wood Window Wall
+ITEM_WOOD_DOOR_WALL,Mur porte en bois,Wood Door Wall
+ITEM_WOOD_STAIRS,Escalier en bois,Wood Stairs
+ITEM_WOOD_FLOOR,Sol en bois,Wood Floor
+ITEM_WOOD_CEILING,Plafond en bois,Wood Ceiling
+ITEM_STONE_FOUNDATION,Fondation en pierre,Stone Foundation
+ITEM_STONE_WALL,Mur en pierre,Stone Wall
+ITEM_STONE_WINDOW_WALL,Mur fenêtre en pierre,Stone Window Wall
+ITEM_STONE_DOOR_WALL,Mur porte en pierre,Stone Door Wall
+ITEM_STONE_STAIRS,Escalier en pierre,Stone Stairs
+ITEM_STONE_FLOOR,Sol en pierre,Stone Floor
+ITEM_STONE_CEILING,Plafond en pierre,Stone Ceiling
+ITEM_WOOD_CHEST,Coffre en bois,Wood Chest
+ITEM_WOOD_DOUBLE_CHEST,Double coffre,Double Chest

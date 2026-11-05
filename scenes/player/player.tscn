@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://cqwplayerscn2"]
+
+[ext_resource type="Script" uid="uid://cqwplayergd2a" path="res://scripts/player/player.gd" id="1_player"]
+[ext_resource type="Script" uid="uid://cqwcameragd2b" path="res://scripts/player/third_person_camera.gd" id="2_camera"]
+[ext_resource type="Script" uid="uid://dqpd4gh1wacw0" path="res://scripts/player/player_animation.gd" id="4_anim"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
+radius = 0.3
+height = 1.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_body"]
+albedo_color = Color(0.25, 0.42, 0.72, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_body"]
+size = Vector3(0.4230469, 0.5687256, 0.36)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_head"]
+albedo_color = Color(0.86, 0.72, 0.58, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_head"]
+size = Vector3(0.36, 0.36, 0.36)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_visor"]
+albedo_color = Color(0.12, 0.14, 0.18, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_visor"]
+size = Vector3(0.03491699, 0.08, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dovo2"]
+size = Vector3(0.03491699, 0.20494628, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_arm"]
+size = Vector3(0.12, 0.42, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dovo2"]
+albedo_color = Color(0.5810318, 0.39935833, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gmlin"]
+size = Vector3(0.21640626, 0.3815918, 0.36)
+
+[node name="Player" type="CharacterBody3D" unique_id=1293185326 groups=["player"]]
+collision_layer = 2
+floor_snap_length = 0.55
+script = ExtResource("1_player")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=671758124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("CapsuleShape3D_body")
+
+[node name="Visual" type="Node3D" parent="." unique_id=221546538]
+script = ExtResource("4_anim")
+
+[node name="Torso" type="Node3D" parent="Visual" unique_id=897164710]
+
+[node name="Body" type="MeshInstance3D" parent="Visual/Torso" unique_id=173178693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00020614266, 0.75370765, 0)
+material_override = SubResource("StandardMaterial3D_body")
+mesh = SubResource("BoxMesh_body")
+
+[node name="Head" type="MeshInstance3D" parent="Visual/Torso" unique_id=56411427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26, 0)
+material_override = SubResource("StandardMaterial3D_head")
+mesh = SubResource("BoxMesh_head")
+
+[node name="Visor" type="MeshInstance3D" parent="Visual/Torso/Head" unique_id=2058306497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05161622, 0.04527557, -0.15955196)
+material_override = SubResource("StandardMaterial3D_visor")
+mesh = SubResource("BoxMesh_visor")
+
+[node name="Visor2" type="MeshInstance3D" parent="Visual/Torso/Head" unique_id=518654685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047730327, 0.04527557, -0.15955196)
+material_override = SubResource("StandardMaterial3D_visor")
+mesh = SubResource("BoxMesh_visor")
+
+[node name="Visor3" type="MeshInstance3D" parent="Visual/Torso/Head" unique_id=75028100]
+transform = Transform3D(-0.00035083294, 0.99999994, 0, -0.99999994, -0.00035083294, 0, 0, 0, 1, -0.009958781, -0.069805145, -0.15955196)
+material_override = SubResource("StandardMaterial3D_visor")
+mesh = SubResource("BoxMesh_dovo2")
+
+[node name="LeftArmPivot" type="Node3D" parent="Visual/Torso" unique_id=1868414969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26, 0.97, 0)
+
+[node name="LeftArm" type="MeshInstance3D" parent="Visual/Torso/LeftArmPivot" unique_id=102928197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.21, 0)
+material_override = SubResource("StandardMaterial3D_head")
+mesh = SubResource("BoxMesh_arm")
+
+[node name="RightArmPivot" type="Node3D" parent="Visual/Torso" unique_id=2106326788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26, 0.97, 0)
+
+[node name="RightArm" type="MeshInstance3D" parent="Visual/Torso/RightArmPivot" unique_id=1094355884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.21, 0)
+material_override = SubResource("StandardMaterial3D_head")
+mesh = SubResource("BoxMesh_arm")
+
+[node name="ToolMount" type="Node3D" parent="Visual/Torso/RightArmPivot/RightArm" unique_id=1567798986]
+transform = Transform3D(0.9901026, 0.12310104, 0.06740171, 0.10839873, -0.365718, -0.924392, -0.08914359, 0.922549, -0.37544215, 0.02000001, -0.15848494, 0.0046692006)
+
+[node name="LeftLegPivot" type="Node3D" parent="Visual" unique_id=1208471085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118202165, 0.4108348, 0)
+
+[node name="LeftLeg" type="MeshInstance3D" parent="Visual/LeftLegPivot" unique_id=237003145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1907959, 0)
+material_override = SubResource("StandardMaterial3D_dovo2")
+mesh = SubResource("BoxMesh_gmlin")
+
+[node name="RightLegPivot" type="Node3D" parent="Visual" unique_id=1856380522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.121137485, 0.4108348, 0)
+
+[node name="RightLeg" type="MeshInstance3D" parent="Visual/RightLegPivot" unique_id=1315425136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1907959, 0)
+material_override = SubResource("StandardMaterial3D_dovo2")
+mesh = SubResource("BoxMesh_gmlin")
+
+[node name="CameraYaw" type="Node3D" parent="." unique_id=1667552079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32, 0)
+script = ExtResource("2_camera")
+
+[node name="Shoulder" type="Node3D" parent="CameraYaw" unique_id=1687188749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.78, 0.16, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraYaw/Shoulder" unique_id=1929542218]
+transform = Transform3D(1, 0, 0, 0, 0.9566922, 0.29110146, 0, -0.29110146, 0.9566922, -0.48200083, 0, 0)
+spring_length = 2.5
+margin = 0.2
+
+[node name="Camera3D" type="Camera3D" parent="CameraYaw/Shoulder/SpringArm3D" unique_id=1746646699]
+current = true
+far = 16000.0

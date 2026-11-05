@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bastragrazer01"]
+
+[ext_resource type="Script" path="res://scripts/creatures/astra_grazer.gd" id="1_grazer"]
+[ext_resource type="PackedScene" uid="uid://bukm8j2emrx3r" path="res://assets/models/faune/buffalo_verdo.glb" id="2_buffalo"]
+[ext_resource type="Script" path="res://scripts/creatures/astra_grazer_anim.gd" id="3_anim"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
+radius = 0.55
+height = 1.65
+
+[node name="AstraGrazer" type="CharacterBody3D" groups=["creature"]]
+collision_layer = 8
+collision_mask = 9
+floor_snap_length = 0.08
+script = ExtResource("1_grazer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("CapsuleShape3D_body")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="ModelMount" type="Node3D" parent="Visual"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0)
+
+[node name="buffalo_verdo" parent="Visual/ModelMount" instance=ExtResource("2_buffalo")]
+
+[node name="GrazerAnim" type="Node" parent="Visual"]
+script = ExtResource("3_anim")

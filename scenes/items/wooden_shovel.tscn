@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dhxpho3xmbntg"]
+
+[ext_resource type="PackedScene" uid="uid://3gjxdnnsmme1" path="res://assets/models/WoodenShovel.glb" id="1_model"]
+
+[node name="WoodenShovel" type="Node3D" unique_id=73016760]
+
+[node name="Model" parent="." unique_id=1547497775 instance=ExtResource("1_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12362543, 0)

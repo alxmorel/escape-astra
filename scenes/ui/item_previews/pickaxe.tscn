@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b3pi528i084mq"]
+
+[ext_resource type="PackedScene" uid="uid://dtdkpqxcc552" path="res://assets/models/WoodenPickaxe.glb" id="1_lpf85"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="pickaxe" type="Node3D" unique_id=855723965]
+
+[node name="World" type="Node3D" parent="." unique_id=42689747]
+
+[node name="Model" type="Node3D" parent="World" unique_id=1887972601]
+
+[node name="PreviewModel" parent="World/Model" unique_id=1970255110 instance=ExtResource("1_lpf85")]
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=388846795]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.3805342, 0.21915865, 0)
+current = true
+fov = 30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=1477252867]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="." unique_id=776790740]
+transform = Transform3D(-0.80680406, -0.29152864, 0.5138854, -0.3400879, 0.9403938, -0.00045275252, -0.48312265, -0.17513153, -0.85785896, 4.921346, 1.2708521, 0.9205575)
+light_energy = 3.084
+
+[node name="FillLight" type="DirectionalLight3D" parent="." unique_id=1278634641]
+transform = Transform3D(0.4167896, 0.31089738, -0.85418344, 8.405046e-09, 0.9396926, 0.34202018, 0.909003, -0.14255047, 0.39165413, -2.4150634, 0.83036745, 1.3131638)
+light_energy = 1.05

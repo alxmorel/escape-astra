@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://dveu44c1ththw"]
+
+[ext_resource type="Shader" uid="uid://cbxyfdwgw5ci6" path="res://shaders/stylized.gdshader" id="1_shader"]
+
+[sub_resource type="ShaderMaterial" id="Mat_0"]
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/albedo = Color(0.62, 0.42, 0.2, 1)
+shader_parameter/saturation = 1.2
+shader_parameter/pastel = 0.06
+shader_parameter/shadow_color = Color(0.38, 0.34, 0.46, 1)
+shader_parameter/toon_softness = 0.22
+shader_parameter/rim_strength = 0.12
+shader_parameter/rim_color = Color(1, 0.93, 0.82, 1)
+shader_parameter/rim_power = 3.2
+
+[sub_resource type="BoxMesh" id="Box_0"]
+size = Vector3(2.16, 0.5, 0.66)
+
+[sub_resource type="ShaderMaterial" id="Mat_1"]
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/albedo = Color(0.44, 0.28, 0.13, 1)
+shader_parameter/saturation = 1.2
+shader_parameter/pastel = 0.06
+shader_parameter/shadow_color = Color(0.38, 0.34, 0.46, 1)
+shader_parameter/toon_softness = 0.22
+shader_parameter/rim_strength = 0.12
+shader_parameter/rim_color = Color(1, 0.93, 0.82, 1)
+shader_parameter/rim_power = 3.2
+
+[sub_resource type="BoxMesh" id="Box_1"]
+size = Vector3(2.16, 0.22, 0.66)
+
+[sub_resource type="ShaderMaterial" id="Mat_2"]
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/albedo = Color(0.78, 0.64, 0.28, 1)
+shader_parameter/saturation = 1.2
+shader_parameter/pastel = 0.06
+shader_parameter/shadow_color = Color(0.38, 0.34, 0.46, 1)
+shader_parameter/toon_softness = 0.22
+shader_parameter/rim_strength = 0.12
+shader_parameter/rim_color = Color(1, 0.93, 0.82, 1)
+shader_parameter/rim_power = 3.2
+
+[sub_resource type="BoxMesh" id="Box_2"]
+size = Vector3(0.1, 0.1, 0.05)
+
+[sub_resource type="BoxMesh" id="Box_3"]
+size = Vector3(0.04, 0.78, 0.7)
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="wood_double_chest" type="Node3D" unique_id=677507499]
+
+[node name="World" type="Node3D" parent="." unique_id=1051995600]
+
+[node name="Model" type="Node3D" parent="World" unique_id=173621523]
+
+[node name="Part0" type="MeshInstance3D" parent="World/Model" unique_id=421598993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+material_override = SubResource("Mat_0")
+mesh = SubResource("Box_0")
+
+[node name="Part1" type="MeshInstance3D" parent="World/Model" unique_id=1439770093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64, 0)
+material_override = SubResource("Mat_1")
+mesh = SubResource("Box_1")
+
+[node name="Part2" type="MeshInstance3D" parent="World/Model" unique_id=151299107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.34)
+material_override = SubResource("Mat_2")
+mesh = SubResource("Box_2")
+
+[node name="Part3" type="MeshInstance3D" parent="World/Model" unique_id=17861455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39, 0)
+material_override = SubResource("Mat_1")
+mesh = SubResource("Box_3")
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=521530872]
+transform = Transform3D(0.87079805, -0.19949707, 0.44934583, -1.3971023e-08, 0.91397166, 0.40577802, -0.4916409, -0.3533507, 0.7958847, 1.8153427, 1.8670712, 2.9977179)
+current = true
+fov = 30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=933309188]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World" unique_id=1366868855]
+transform = Transform3D(0.81915206, -0.38379756, 0.42625037, 0, 0.7431448, 0.6691306, -0.57357645, -0.5481197, 0.6087486, 0, 0, 0)
+light_energy = 1.35
+
+[node name="FillLight" type="DirectionalLight3D" parent="World" unique_id=1678692921]
+transform = Transform3D(-0.76604444, 0.21984631, -0.6040228, 0, 0.9396926, 0.34202012, 0.64278764, 0.26200262, -0.7198463, 0, 0, 0)
+light_energy = 0.35

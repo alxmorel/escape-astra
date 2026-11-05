@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cijqi1t4ehg7m"]
+
+[ext_resource type="PackedScene" uid="uid://dtmnaa8awg11r" path="res://assets/models/StoneAxe.glb" id="1_model"]
+
+[node name="StoneAxe" type="Node3D" unique_id=1213836417]
+
+[node name="Model" parent="." unique_id=1945740379 instance=ExtResource("1_model")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)

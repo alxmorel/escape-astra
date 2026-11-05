@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b68vsybf4r7gm"
+path="res://.godot/imported/Whimsical Journey.ogg-5ca77df2b4a6fd2a3c50e181ea12d224.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/song/Whimsical Journey.ogg"
+dest_files=["res://.godot/imported/Whimsical Journey.ogg-5ca77df2b4a6fd2a3c50e181ea12d224.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

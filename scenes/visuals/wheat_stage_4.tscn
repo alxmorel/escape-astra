@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bwheatstage4v"]
+
+[ext_resource type="PackedScene" uid="uid://bs2fsgkrt6ud" path="res://assets/models/wheat_phase_04.glb" id="1_model"]
+
+[node name="WheatStage4" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

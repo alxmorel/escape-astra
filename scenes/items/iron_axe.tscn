@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cl5w5u0wkp7yj"]
+
+[ext_resource type="PackedScene" uid="uid://jc6tyli2i6la" path="res://assets/models/IronAxe.glb" id="1_model"]
+
+[node name="IronAxe" type="Node3D" unique_id=466544972]
+
+[node name="Model" parent="." unique_id=1210831312 instance=ExtResource("1_model")]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)

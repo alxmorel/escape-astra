@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cedwyl2lwuxf5"]
+
+[ext_resource type="PackedScene" uid="uid://bftkbe13vctse" path="res://assets/models/rock_01.glb" id="1_rock"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="stone" type="Node3D" unique_id=943800220]
+
+[node name="World" type="Node3D" parent="." unique_id=1804602581]
+
+[node name="Model" type="Node3D" parent="World" unique_id=1142820214]
+
+[node name="rock_01" parent="World/Model" unique_id=1810858624 instance=ExtResource("1_rock")]
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=999383588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7020184, 3.7579248)
+current = true
+fov = 30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=83673189]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World" unique_id=274844439]
+transform = Transform3D(-0.3213536, -0.6336394, 0.70372784, -6.9701933e-10, 0.7431448, 0.6691306, -0.94695926, 0.21502754, -0.2388123, 2.6064517, 0.9502741, 2.6849637)
+
+[node name="FillLight" type="DirectionalLight3D" parent="World" unique_id=1264516814]
+transform = Transform3D(-0.8193716, 0.19606747, -0.53869087, 0, 0.9396928, 0.34202015, 0.5732628, 0.28024167, -0.7699576, -5.819906, 0, 1.6450641)

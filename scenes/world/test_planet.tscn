@@ -1,0 +1,65 @@
+[gd_scene load_steps=13 format=3 uid="uid://cqwworldscen2"]
+
+[ext_resource type="Script" uid="uid://bplanetgenr2x" path="res://scripts/world/planet_generator.gd" id="1_gen"]
+[ext_resource type="PackedScene" uid="uid://cqwplayerscn2" path="res://scenes/player/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://bhudscene2xxx" path="res://scenes/ui/hud.tscn" id="3_hud"]
+[ext_resource type="Script" uid="uid://bdaynightgd2x" path="res://scripts/world/day_night.gd" id="4_sky"]
+[ext_resource type="Script" uid="uid://bplanetflora2" path="res://scripts/world/planet_flora.gd" id="5_flora"]
+[ext_resource type="Script" path="res://scripts/core/world_session.gd" id="6_session"]
+[ext_resource type="Script" path="res://scripts/world/weather_manager.gd" id="7_weather"]
+[ext_resource type="Shader" path="res://shaders/sky.gdshader" id="8_sky"]
+[ext_resource type="PackedScene" uid="uid://bastradodo01" path="res://scenes/creatures/astra_dodo.tscn" id="9_dodo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sky"]
+shader = ExtResource("8_sky")
+shader_parameter/up = Vector3(0, 1, 0)
+shader_parameter/sun_dir = Vector3(0, 1, 0)
+shader_parameter/zenith_color = Color(0.4, 0.62, 0.9, 1)
+shader_parameter/nadir_color = Color(0.5, 0.7, 0.93, 1)
+shader_parameter/sun_color = Color(1, 0.96, 0.88, 1)
+shader_parameter/sunset_color = Color(0.9, 0.48, 0.28, 1)
+shader_parameter/sunset = 0.0
+shader_parameter/energy = 1.0
+
+[sub_resource type="Sky" id="Sky_sky"]
+sky_material = SubResource("ShaderMaterial_sky")
+
+[sub_resource type="Environment" id="Environment_world"]
+background_mode = 2
+sky = SubResource("Sky_sky")
+ambient_light_source = 3
+ambient_light_energy = 0.42
+tonemap_mode = 2
+tonemap_exposure = 1.0
+
+[node name="TestPlanet" type="Node3D"]
+script = ExtResource("6_session")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_world")
+
+[node name="WeatherManager" type="Node3D" parent="."]
+script = ExtResource("7_weather")
+
+[node name="SkySystem" type="Node3D" parent="."]
+script = ExtResource("4_sky")
+
+[node name="SunPivot" type="Node3D" parent="SkySystem"]
+
+[node name="Sun" type="DirectionalLight3D" parent="SkySystem/SunPivot"]
+rotation = Vector3(-1.570796, 0, 0)
+shadow_enabled = true
+
+[node name="Planet" type="StaticBody3D" parent="." groups=["planet"]]
+script = ExtResource("1_gen")
+
+[node name="Flora" type="Node3D" parent="Planet"]
+script = ExtResource("5_flora")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 70, 0)
+
+[node name="AstraDodo" parent="." instance=ExtResource("9_dodo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 70, 2)
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]

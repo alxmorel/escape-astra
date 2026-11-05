@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c6c0icgfrf345"]
+
+[ext_resource type="PackedScene" uid="uid://crqu1xux41awc" path="res://assets/models/log.glb" id="1_v76ju"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="wood" type="Node3D" unique_id=1577470313]
+
+[node name="World" type="Node3D" parent="." unique_id=774286872]
+
+[node name="Model" type="Node3D" parent="World" unique_id=2020263260]
+
+[node name="log" parent="World/Model" unique_id=429582798 instance=ExtResource("1_v76ju")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=1244066161]
+transform = Transform3D(1, 0, 0, 0, 0.7706657, 0.63723963, 0, -0.63723963, 0.7706657, 0, 2.0046659, 2.6135535)
+current = true
+fov = 30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=255900454]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World" unique_id=1673084149]
+transform = Transform3D(0.81915206, -0.38379756, 0.42625037, 0, 0.7431448, 0.6691306, -0.57357645, -0.5481197, 0.6087486, 0, 0, 0)
+light_energy = 1.35
+
+[node name="FillLight" type="DirectionalLight3D" parent="World" unique_id=1532582526]
+transform = Transform3D(-0.76604444, 0.21984631, -0.6040228, 0, 0.9396926, 0.34202012, 0.64278764, 0.26200262, -0.7198463, 0, 0, 0)
+light_energy = 0.35

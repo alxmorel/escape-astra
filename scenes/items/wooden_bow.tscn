@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bwoodenbow01"]
+
+[ext_resource type="PackedScene" uid="uid://nl10gossovc1" path="res://assets/models/wooden_bow.glb" id="1_model"]
+[ext_resource type="Script" uid="uid://mjk6805srh4f" path="res://scripts/items/bow_held.gd" id="2_script"]
+
+[node name="WoodenBow" type="Node3D" unique_id=1405868037]
+script = ExtResource("2_script")
+
+[node name="Model" parent="." unique_id=1575535590 instance=ExtResource("1_model")]
+transform = Transform3D(8.742278e-08, 0, -1, 0, 1, 0, 1, 0, 8.742278e-08, 0, 0.02, 0)

@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://broe1qtl301bw"]
+
+[ext_resource type="Script" uid="uid://crdyoa2bruh3j" path="res://scripts/ui/furnace_panel.gd" id="1_panel"]
+[ext_resource type="Script" uid="uid://bitemslotgd2x" path="res://scripts/ui/item_slot.gd" id="2_slot"]
+
+[sub_resource type="StyleBoxFlat" id="Style_panel"]
+bg_color = Color(0.07, 0.08, 0.09, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 0.08)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="Style_slot_hint"]
+bg_color = Color(0.11, 0.12, 0.13, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.32, 0.34, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="Style_progress_bg"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.12, 0.13, 0.14, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.32, 0.34, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="Style_progress_fill"]
+bg_color = Color(0.92, 0.58, 0.22, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="FurnacePanel" type="CanvasLayer" unique_id=191125070]
+layer = 25
+script = ExtResource("1_panel")
+
+[node name="Root" type="Control" parent="." unique_id=1570417705]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="Root" unique_id=1967284733]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.55)
+
+[node name="Panel" type="PanelContainer" parent="Root" unique_id=333887551]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -220.0
+offset_right = 210.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Style_panel")
+
+[node name="Margin" type="MarginContainer" parent="Root/Panel" unique_id=687124391]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBox" type="VBoxContainer" parent="Root/Panel/Margin" unique_id=123442020]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Root/Panel/Margin/VBox" unique_id=1507827118]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Four"
+
+[node name="FurnaceRow" type="HBoxContainer" parent="Root/Panel/Margin/VBox" unique_id=1853111860]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="InputColumn" type="VBoxContainer" parent="Root/Panel/Margin/VBox/FurnaceRow" unique_id=1664818789]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="InputLabel" type="Label" parent="Root/Panel/Margin/VBox/FurnaceRow/InputColumn" unique_id=197835468]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.8, 0.82, 1)
+theme_override_font_sizes/font_size = 12
+text = "À cuire"
+horizontal_alignment = 1
+metadata/key = "FURNACE_INPUT"
+
+[node name="InputSlot" type="Panel" parent="Root/Panel/Margin/VBox/FurnaceRow/InputColumn" unique_id=134313609]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("Style_slot_hint")
+script = ExtResource("2_slot")
+slot_index = 0
+
+[node name="CenterColumn" type="VBoxContainer" parent="Root/Panel/Margin/VBox/FurnaceRow" unique_id=995970187]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="FuelLabel" type="Label" parent="Root/Panel/Margin/VBox/FurnaceRow/CenterColumn" unique_id=447681615]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.8, 0.82, 1)
+theme_override_font_sizes/font_size = 12
+text = "Combustible"
+horizontal_alignment = 1
+metadata/key = "FURNACE_FUEL"
+
+[node name="FuelSlot" type="Panel" parent="Root/Panel/Margin/VBox/FurnaceRow/CenterColumn" unique_id=624629700]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("Style_slot_hint")
+script = ExtResource("2_slot")
+slot_index = 1
+
+[node name="CookProgress" type="ProgressBar" parent="Root/Panel/Margin/VBox/FurnaceRow/CenterColumn" unique_id=1367007318]
+custom_minimum_size = Vector2(120, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("Style_progress_bg")
+theme_override_styles/fill = SubResource("Style_progress_fill")
+max_value = 1.0
+show_percentage = false
+
+[node name="ResultColumn" type="VBoxContainer" parent="Root/Panel/Margin/VBox/FurnaceRow" unique_id=9449250]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="ResultLabel" type="Label" parent="Root/Panel/Margin/VBox/FurnaceRow/ResultColumn" unique_id=1355480825]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.8, 0.82, 1)
+theme_override_font_sizes/font_size = 12
+text = "Résultat"
+horizontal_alignment = 1
+metadata/key = "FURNACE_RESULT"
+
+[node name="ResultSlot" type="Panel" parent="Root/Panel/Margin/VBox/FurnaceRow/ResultColumn" unique_id=317454378]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("Style_slot_hint")
+script = ExtResource("2_slot")
+slot_index = 2
+
+[node name="InventoryLabel" type="Label" parent="Root/Panel/Margin/VBox" unique_id=1537020269]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Inventaire"
+metadata/key = "INVENTORY"
+
+[node name="PlayerGrid" type="GridContainer" parent="Root/Panel/Margin/VBox" unique_id=2116700939]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 5

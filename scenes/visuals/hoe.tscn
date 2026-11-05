@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b1jin62qibr57"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_handle"]
+albedo_color = Color(0.62, 0.42, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="Mesh_handle"]
+size = Vector3(0.04, 0.82, 0.04)
+
+[sub_resource type="StandardMaterial3D" id="Mat_blade"]
+albedo_color = Color(0.55, 0.38, 0.18, 1)
+
+[sub_resource type="BoxMesh" id="Mesh_blade"]
+size = Vector3(0.22, 0.045, 0.08)
+
+[node name="Hoe" type="Node3D" unique_id=750818703]
+
+[node name="Visual" type="Node3D" parent="." unique_id=877907066]
+
+[node name="Handle" type="MeshInstance3D" parent="Visual" unique_id=963231980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41, 0)
+material_override = SubResource("Mat_handle")
+mesh = SubResource("Mesh_handle")
+
+[node name="Blade" type="MeshInstance3D" parent="Visual" unique_id=614517763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0.05)
+material_override = SubResource("Mat_blade")
+mesh = SubResource("Mesh_blade")

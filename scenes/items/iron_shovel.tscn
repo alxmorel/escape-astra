@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dlfo3cpdnc2i4"]
+
+[ext_resource type="PackedScene" uid="uid://ccg1khpeu3f5g" path="res://assets/models/IronShovel.glb" id="1_model"]
+
+[node name="IronShovel" type="Node3D" unique_id=1045548543]
+
+[node name="Model" parent="." unique_id=785425546 instance=ExtResource("1_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.124, 0)

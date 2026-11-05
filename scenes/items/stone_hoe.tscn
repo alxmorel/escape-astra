@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bstonehoesc01"]
+
+[ext_resource type="PackedScene" uid="uid://dh1faqsf4jmuh" path="res://assets/models/StoneHoe.glb" id="1_model"]
+
+[node name="StoneHoe" type="Node3D" unique_id=2040161699]
+
+[node name="Model" parent="." unique_id=243065423 instance=ExtResource("1_model")]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, -0.021, 0)

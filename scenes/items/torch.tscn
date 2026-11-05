@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cqinw4kst0age"]
+
+[ext_resource type="PackedScene" uid="uid://c5c4orq22ijga" path="res://assets/models/torch.glb" id="1_model"]
+[ext_resource type="Script" uid="uid://brxif81r6hrx3" path="res://scripts/items/torch_held.gd" id="2_held"]
+
+[node name="Torch" type="Node3D" unique_id=1692660617]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("2_held")
+
+[node name="Model" parent="." unique_id=480160046 instance=ExtResource("1_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
+
+[node name="Light" type="OmniLight3D" parent="." unique_id=1334645713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7868147e-08, 0.63877445, 0)
+light_color = Color(1, 0.74, 0.4, 1)
+light_energy = 0.9
+light_indirect_energy = 0.22
+light_specular = 0.35
+shadow_enabled = true
+shadow_bias = 0.04
+distance_fade_enabled = true
+distance_fade_begin = 18.0
+distance_fade_shadow = 14.0
+distance_fade_length = 8.0
+omni_range = 8.5
+omni_attenuation = 2.4

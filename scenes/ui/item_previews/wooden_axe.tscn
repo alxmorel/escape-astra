@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dc0suii0nfyy8"]
+
+[ext_resource type="PackedScene" uid="uid://n1ftjyiq46v0" path="res://assets/models/WoodenAxe.glb" id="1_8q1pj"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="wooden_axe" type="Node3D" unique_id=1144018842]
+
+[node name="World" type="Node3D" parent="." unique_id=294434569]
+
+[node name="Model" type="Node3D" parent="World" unique_id=840287988]
+transform = Transform3D(-0.019227533, -0.27496594, 0.9612617, 0.06705422, 0.9589201, 0.27563736, -0.9975641, 0.069756486, -4.2018083e-08, 0, 0, 0)
+
+[node name="WoodenAxe" parent="World/Model" unique_id=1141773109 instance=ExtResource("1_8q1pj")]
+transform = Transform3D(0.9998342, -0.002371125, -0.018054305, -0.0023710951, 0.9660916, -0.25818858, 0.01805431, 0.25818858, 0.96592575, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=1594620654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10304475, 0.30197817, 2.4452264)
+current = true
+fov = 30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=794646186]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World" unique_id=1331290160]
+transform = Transform3D(-0.049979985, -0.017594203, 0.99859536, -0.34008783, 0.94039345, -0.000452694, -0.9390646, -0.33963287, -0.052984476, 4.921346, 1.2708521, 0.9205575)
+light_energy = 2.474
+
+[node name="FillLight" type="DirectionalLight3D" parent="World" unique_id=2017110420]
+transform = Transform3D(0.4167896, 0.31089738, -0.85418344, 8.405046e-09, 0.9396926, 0.34202018, 0.909003, -0.14255047, 0.39165413, -2.4150634, 0.83036745, 1.3131638)
+light_energy = 1.05

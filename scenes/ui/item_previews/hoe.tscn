@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://deige0drouaa6"]
+
+[ext_resource type="PackedScene" uid="uid://bwoodenhoesc" path="res://scenes/items/wooden_hoe.tscn" id="1_model"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="hoe" type="Node3D" unique_id=1858299232]
+
+[node name="World" type="Node3D" parent="." unique_id=1354110090]
+
+[node name="Model" type="Node3D" parent="World" unique_id=783022765]
+
+[node name="WoodenHoe" parent="World/Model" unique_id=535938304 instance=ExtResource("1_model")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=1139198289]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.217442, 0.25176358, -0.0799129)
+current = true
+fov = 30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=177695020]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="." unique_id=1845945299]
+transform = Transform3D(-0.7474738, -0.43067676, 0.5057673, -0.51648396, 0.85559154, -0.03474891, -0.41776466, -0.28719458, -0.8619698, 4.9014144, -0.89699125, 0.94452333)
+light_energy = 2.01
+
+[node name="FillLight" type="DirectionalLight3D" parent="." unique_id=1272468446]
+transform = Transform3D(0.40558192, 0.85963684, -0.31068885, -0.40936986, 0.47473526, 0.7791293, 0.81726336, -0.18881416, 0.54445356, -2.4150634, 0.83036745, 1.3131638)
+light_energy = 2.51

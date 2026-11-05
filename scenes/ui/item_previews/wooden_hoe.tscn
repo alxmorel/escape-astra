@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bprevhoe0001"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="wooden_hoe" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Model" type="Node3D" parent="World"]
+
+[node name="Pose" type="Node3D" parent="World/Model"]
+transform = Transform3D(0.55, 0, 0, 0, 0, -0.55, 0, 0.55, 0, 0, 0.2, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 1.1, 0.25, 0.2)
+fov = 30.0
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World"]
+rotation_degrees = Vector3(-42, 35, 0)
+light_energy = 1.35
+shadow_enabled = false
+
+[node name="FillLight" type="DirectionalLight3D" parent="World"]
+rotation_degrees = Vector3(-20, -140, 0)
+light_energy = 0.35
+shadow_enabled = false

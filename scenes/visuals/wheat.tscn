@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bwheatitemvis"]
+
+[ext_resource type="PackedScene" uid="uid://c8q06twktnb2m" path="res://assets/models/wheat.glb" id="1_model"]
+
+[node name="Wheat" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

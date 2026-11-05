@@ -1,0 +1,13 @@
+---
+description: Lire et maintenir AGENTS.md pour recontextualiser sans perte de contexte
+alwaysApply: true
+---
+
+# Recontextualisation
+
+- Avant une tâche non triviale : lire `AGENTS.md` (carte domaines, flux, dernières décisions).
+- Après un changement qui modifie un **flux**, une **convention**, ou un **point d’entrée** (chemin / layer / adapter) : mettre à jour `AGENTS.md`.
+- Mettre à jour surtout : tableau domaines, flux critiques, section « Dernières décisions » (5–10 bullets max).
+- Remplacer ou résumer ; ne pas gonfler le fichier ; viser ~100–150 lignes.
+- Pas de code verbatim dans `AGENTS.md` : chemins + comportements uniquement.
+- Ne pas créer de docs parallèles redondantes ; `AGENTS.md` reste la source de vérité contextuelle.

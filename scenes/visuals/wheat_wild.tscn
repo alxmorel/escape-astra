@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cs4a8o0xb2xfr"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_stalk"]
+albedo_color = Color(0.62, 0.5, 0.16, 1)
+
+[sub_resource type="BoxMesh" id="Mesh_stalk"]
+size = Vector3(0.035, 0.56, 0.035)
+
+[sub_resource type="StandardMaterial3D" id="Mat_head"]
+albedo_color = Color(0.95, 0.78, 0.22, 1)
+
+[sub_resource type="BoxMesh" id="Mesh_head"]
+size = Vector3(0.07, 0.12, 0.045)
+
+[node name="WheatWild" type="Node3D" unique_id=1111521918]
+
+[node name="Visual" type="Node3D" parent="." unique_id=892631598]
+
+[node name="StalkA" type="MeshInstance3D" parent="Visual" unique_id=44137287]
+transform = Transform3D(0.98, 0, 0.2, 0, 1, 0, -0.2, 0, 0.98, -0.07, 0.28, 0.02)
+material_override = SubResource("Mat_stalk")
+mesh = SubResource("Mesh_stalk")
+
+[node name="HeadA" type="MeshInstance3D" parent="Visual" unique_id=2020708031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07, 0.58, 0.02)
+material_override = SubResource("Mat_head")
+mesh = SubResource("Mesh_head")
+
+[node name="StalkB" type="MeshInstance3D" parent="Visual" unique_id=1589537539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0.3, -0.02)
+material_override = SubResource("Mat_stalk")
+mesh = SubResource("Mesh_stalk")
+
+[node name="HeadB" type="MeshInstance3D" parent="Visual" unique_id=1492218648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0.62, -0.02)
+material_override = SubResource("Mat_head")
+mesh = SubResource("Mesh_head")
+
+[node name="StalkC" type="MeshInstance3D" parent="Visual" unique_id=1056051804]
+transform = Transform3D(0.96, 0, -0.28, 0, 1, 0, 0.28, 0, 0.96, 0.09, 0.26, 0.04)
+material_override = SubResource("Mat_stalk")
+mesh = SubResource("Mesh_stalk")
+
+[node name="HeadC" type="MeshInstance3D" parent="Visual" unique_id=1718389693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09, 0.55, 0.04)
+material_override = SubResource("Mat_head")
+mesh = SubResource("Mesh_head")

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://blv67qyw5b0lc"]
+
+[ext_resource type="PackedScene" uid="uid://d4gi3yohf2j6k" path="res://assets/models/wooden_sword.glb" id="1_model"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.56, 0.6, 1)
+ambient_light_energy = 0.45
+
+[node name="sword" type="Node3D" unique_id=616247634]
+
+[node name="World" type="Node3D" parent="." unique_id=1231600510]
+
+[node name="Model" type="Node3D" parent="World" unique_id=307219335]
+
+[node name="PreviewModel" parent="World/Model" unique_id=935305046 instance=ExtResource("1_model")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=567476491]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.0653334, 0.57394636, 0)
+current = true
+fov = 28.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=182278719]
+environment = SubResource("Environment_preview")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="World" unique_id=1402465116]
+transform = Transform3D(0.019589156, -0.66900223, 0.7430022, 0, 0.7431448, 0.6691306, -0.99980813, -0.013107747, 0.01455754, 0, 0, 0)
+light_energy = 1.35
+
+[node name="FillLight" type="DirectionalLight3D" parent="World" unique_id=543124470]
+transform = Transform3D(0.9994267, -0.011579379, 0.031814158, 7.741607e-09, 0.93969274, 0.34202012, -0.033855885, -0.34182397, 0.93915397, 0, 0, 0)
+light_energy = 4.101

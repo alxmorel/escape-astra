@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bastradodo01"]
+
+[ext_resource type="Script" path="res://scripts/creatures/astra_dodo.gd" id="1_dodo"]
+[ext_resource type="PackedScene" uid="uid://cwmdoi81p1x3o" path="res://assets/models/faune/dodo.glb" id="2_model"]
+[ext_resource type="Script" path="res://scripts/creatures/astra_dodo_anim.gd" id="3_anim"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
+radius = 0.32
+height = 1.05
+
+[node name="AstraDodo" type="CharacterBody3D" groups=["creature", "dodo"]]
+collision_layer = 8
+collision_mask = 9
+floor_snap_length = 0.08
+script = ExtResource("1_dodo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62, 0)
+shape = SubResource("CapsuleShape3D_body")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="ModelMount" type="Node3D" parent="Visual"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="dodo" parent="Visual/ModelMount" instance=ExtResource("2_model")]
+
+[node name="DodoAnim" type="Node" parent="Visual"]
+script = ExtResource("3_anim")
